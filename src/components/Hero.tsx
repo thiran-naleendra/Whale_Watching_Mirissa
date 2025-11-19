@@ -19,8 +19,7 @@ const Hero = () => {
   ></div>
 
   {/* DARK GRADIENT OVERLAY */}
-  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-700/50 to-teal-600/50"></div>
-
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-700/70 to-teal-600/70"></div>
 
   {/* LIGHT BLUR EFFECTS */}
   <div className="absolute inset-0 opacity-10">
@@ -31,8 +30,8 @@ const Hero = () => {
   {/* MAIN CONTENT */}
   <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-      Experience the Majestic
-      <br />
+      {/* Experience the Majestic
+      <br /> */} <br />
       <span className="text-teal-300">Whale Watching in Mirissa</span>
     </h1>
 
@@ -49,7 +48,7 @@ const Hero = () => {
         <span>Book Your Adventure</span>
       </button>
 
-      <button
+      {/* <button
         onClick={() =>
           document.getElementById("services")?.scrollIntoView({
             behavior: "smooth",
@@ -58,30 +57,18 @@ const Hero = () => {
         className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-900 transition duration-300"
       >
         Explore Services
-      </button>
+      </button> */}
     </div>
 
     {/* STATS CARDS */}
-    <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-        <div className="text-4xl font-bold text-white mb-2">3-5 Hours</div>
-        <div className="text-blue-100">Tour Duration</div>
-      </div>
-      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-        <div className="text-4xl font-bold text-white mb-2">Daily</div>
-        <div className="text-blue-100">Departures at 7am</div>
-      </div>
-      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-        <div className="text-4xl font-bold text-white mb-2">Safe</div>
-        <div className="text-blue-100">Licensed & Insured</div>
-      </div>
-    </div>
+    
   </div>
 
   {/* BOUNCE ARROW */}
-  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+  {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+   
     <ArrowDown className="w-8 h-8 text-white" />
-  </div>
+  </div> */}
 </section>
 
   );
