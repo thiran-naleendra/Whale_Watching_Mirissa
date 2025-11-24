@@ -1,5 +1,6 @@
 import { MessageCircle, ArrowDown, Waves, Ship, Camera, Palmtree } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -143,9 +144,9 @@ const Home = () => {
             {quickServices.map((service, idx) => {
               const Icon = service.icon;
               return (
-                <a
+                <Link
                   key={idx}
-                  href={service.path}
+                  to={service.path}
                   className="group bg-white rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 p-6 md:p-8 text-center hover:-translate-y-2"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl md:rounded-2xl mb-4 group-hover:scale-110 transition">
@@ -153,7 +154,7 @@ const Home = () => {
                   </div>
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-sm md:text-base text-gray-600">{service.description}</p>
-                </a>
+                </Link>
               );
             })}
           </div>
