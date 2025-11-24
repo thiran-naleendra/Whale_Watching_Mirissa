@@ -32,25 +32,25 @@ const Home = () => {
       icon: Waves,
       title: 'Whale Watching',
       description: 'Experience blue whales and dolphins',
-      link: '/services'
+      to: '/services'
     },
     {
       icon: Ship,
       title: 'Boat Tours',
       description: 'Choose your perfect boat experience',
-      link: '/services'
+      to: '/services'
     },
     {
       icon: Camera,
       title: 'Gallery',
       description: 'View amazing ocean moments',
-      link: '/gallery'
+      to: '/gallery'
     },
     {
       icon: Palmtree,
       title: 'Sri Lanka Tours',
       description: 'Explore the island beyond ocean',
-      link: '/tours'
+      to: '/tours'
     }
   ];
 
@@ -145,7 +145,7 @@ const Home = () => {
               return (
                 <a
                   key={idx}
-                  href={service.link}
+                  href={service.to}
                   className="group bg-white rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 p-6 md:p-8 text-center hover:-translate-y-2"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl md:rounded-2xl mb-4 group-hover:scale-110 transition">
