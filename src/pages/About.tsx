@@ -96,7 +96,7 @@ const About = () => {
 
   <div className="rounded-2xl overflow-hidden shadow-2xl h-80 md:h-96">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4738.238566716563!2d80.45527639984216!3d5.947883259166493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae13f5b456f65b1%3A0xb53f94b2d1061c47!2sIsland%20Breeze%20Whale%20Watching!5e1!3m2!1sen!2slk!4v1763955867244!5m2!1sen!2slk"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.17177714299646!2d80.45188434633727!3d5.947744846058508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae13f49f8c43a3d%3A0x4a1f5cfc9defc101!2sWhale%20watching%20Mirissa!5e1!3m2!1sen!2slk!4v1764729926525!5m2!1sen!2slk"
       width="100%"
       height="100%"
       style={{ border: 0 }}

@@ -10,6 +10,11 @@ const Services = () => {
     );
   };
 
+//   const handleBookNow = () => {
+//   window.open("https://www.google.com", "_blank");   //booking page
+// };
+
+
   const services = [
     {
       title: "Shared Whale Watching Tour",
