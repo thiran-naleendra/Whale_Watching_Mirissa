@@ -62,7 +62,7 @@ const About = () => {
           <div className="relative order-first lg:order-last">
             <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.unsplash.com/photo-1569670380685-4582bf29a24a?q=80&w=673&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Whale watching boat"
                 className="w-full h-full object-cover"
               />

@@ -10,11 +10,6 @@ const Services = () => {
     );
   };
 
-//   const handleBookNow = () => {
-//   window.open("https://www.google.com", "_blank");   //booking page
-// };
-
-
   const services = [
     {
       title: "Shared Whale Watching Tour",
@@ -67,7 +62,7 @@ const Services = () => {
         className="relative h-[70vh] md:h-[70vh] flex items-center justify-center text-center bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg')",
+            "url('https://images.unsplash.com/photo-1585880902425-7ef6e1b0f87b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>

@@ -59,7 +59,7 @@ const Tours = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[80vh] md:h-[90vh] flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg')" }}>
+      <section className="relative h-[80vh] md:h-[90vh] flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1753442361369-e2079446a2b7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-3xl px-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">

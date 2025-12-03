@@ -56,7 +56,7 @@ const Activities = () => {
       {/* Hero Section */}
       <section
         className="relative h-[80vh] md:h-[90vh] flex items-center justify-center text-center bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.pexels.com/photos/34855136/pexels-photo-34855136.jpeg')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1752498226651-ca666568d9a2?q=80&w=1679&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-3xl px-4">
