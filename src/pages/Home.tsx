@@ -1,9 +1,44 @@
 import { MessageCircle, ArrowDown, Waves, Ship, Camera, Palmtree } from 'lucide-react';
+import { Mountain, MapPin,   } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import sharedboat from '../Images/islandbreezeboat.jpg';
+import speedboat from '../Images/speedboatmirissa.jpg';
+import bigboat from '../Images/pvtboat.jpg';
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+   const tours = [
+    {
+      title: 'Shared Big Boat',
+      icon: Mountain,
+      image: sharedboat,
+      description: "Double Decker Trimaran departs everyday 7am from mirissa harbour and charges as per person rate. it's more common choice of people as it's affordable and offers you breakfast on board. boat has 70 seats and fully safety equipped and staff will help you anytime you need them.if you stay in mirissa we can arrange transport from hotel to harbor.",
+      
+    },
+    {
+      title: 'Private Speed Boat',
+      icon: Camera,
+      image: speedboat,
+      description: 'Private Speed boat is very unique experience that you can get with whale watching.tour takes 3 hours maximum and you can start from 7am or bit later as your convenience. boat can travel up to 30knots per hour speed that reduce travel time but more watching time.this tour is private so you have to pay per boat and can take 5 people max.',
+      
+    },
+    {
+      title: 'Private Big Boat',
+      icon: Palmtree,
+      image: bigboat,
+      description: 'this is perfect option for those who wish to enjoy whale watching with small private groups,ideal for groups between 10-20pax. boat can take up to 35 passengers you can start this boat early morning from 6am or later and change tour time as your plan. we offer you breakfast and ample beverages as your request.Boat has sanitary facilities as well.',
+      
+    },
+    {
+      title: 'Snorkeling & Diving',
+      icon: MapPin,
+      image: 'https://images.unsplash.com/photo-1658298208155-ab71765747a1?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: "Sri lanka has few famous diving & snorkeling sites,South of sri lanka(mirissa,polhena,weligama unawatuna & hikkaduwa)has calm weather & clear water from december to april and in Eastern province from june to october. no matter if you don't have experience before here you can start your padi training course as well. ",
+      
+    }
+  ];
 
   const heroImages = [
     'https://images.pexels.com/photos/4666753/pexels-photo-4666753.jpeg',
@@ -160,6 +195,58 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Tours Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-12 md:pb-24">
+        
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
+          {tours.map((tour, index) => {
+            const Icon = tour.icon;
+            return (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col"
+              >
+                <div className="relative h-48 md:h-64 overflow-hidden">
+                  <img
+                    src={tour.image}
+                    alt={tour.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 flex items-center space-x-3">
+                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    <h3 className="text-lg md:text-2xl font-bold text-white">{tour.title}</h3>
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-8 flex-1 flex flex-col">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base flex-1">{tour.description}</p>
+
+                  
+                  
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Custom Tours Section */}
+        <div className="text-center bg-gradient-to-r from-blue-200 to-teal-200 rounded-2xl md:rounded-3xl p-8 md:p-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Custom Tour Packages</h3>
+          <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Want to create your own adventure? We offer personalized tour packages tailored to your interests and schedule.
+          </p>
+          <button
+            onClick={() => handleBookNow('Custom Tour Package')}
+            className="bg-blue-600 text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center space-x-2 text-sm md:text-lg"
+          >
+            <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+            <span>Plan Your Tour</span>
+          </button>
+        </div>
+      </div>
 
       <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-teal-500">
         <div className="max-w-4xl mx-auto text-center text-white">
