@@ -78,46 +78,66 @@ const Tours = () => {
   return (
     <>
       <Helmet>
-    {/* Primary SEO Meta Tags */}
-    <title>Sri Lanka Tour Packages 2025 | Wildlife, Culture & Beach Tours</title>
-    <meta name="title" content="Sri Lanka Tour Packages 2025 | Wildlife, Culture & Beach Tours" />
-    <meta 
-      name="description" 
-      content="Explore Sri Lanka with Island Breeze. Customizable 2025 tour packages including Yala wildlife safaris, Sigiriya rock tours, Kandy culture, and scenic tea estates. Book now!" 
-    />
+        {/* Primary SEO Meta Tags */}
+        <title>
+          Sri Lanka Tour Packages 2025 | Wildlife, Culture & Beach Tours
+        </title>
+        <meta
+          name="title"
+          content="Sri Lanka Tour Packages 2025 | Wildlife, Culture & Beach Tours"
+        />
+        <meta
+          name="description"
+          content="Explore Sri Lanka with Island Breeze. Customizable 2025 tour packages including Yala wildlife safaris, Sigiriya rock tours, Kandy culture, and scenic tea estates. Book now!"
+        />
 
-    {/* Regional & Activity Keywords */}
-    <meta 
-      name="keywords" 
-      content="sri lanka tour packages 2025, sigiriya rock tour, yala wildlife safari, kandy cultural tours, tea estate tours sri lanka, customized sri lanka itinerary, ella scenic train tours" 
-    />
+        {/* Regional & Activity Keywords */}
+        <meta
+          name="keywords"
+          content="sri lanka tour packages 2025, sigiriya rock tour, yala wildlife safari, kandy cultural tours, tea estate tours sri lanka, customized sri lanka itinerary, ella scenic train tours"
+        />
 
-    {/* Canonical URL */}
-    <link rel="canonical" href="https://whalewatchingmirissa.com/tours" />
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://whalewatchingmirissa.com/tours" />
 
-    {/* Open Graph / Facebook (Showcasing the Island's Beauty) */}
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://whalewatchingmirissa.com/tours" />
-    <meta property="og:title" content="Unforgettable Sri Lanka Island Tours | Wildlife & Heritage" />
-    <meta 
-      property="og:description" 
-      content="From golden beaches to misty mountains. Discover our hand-picked Sri Lanka travel packages and custom itineraries for 2025." 
-    />
-    <meta property="og:image" content="https://whalewatchingmirissa.com/assets/sri-lanka-tours-hero.jpg" />
+        {/* Open Graph / Facebook (Showcasing the Island's Beauty) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://whalewatchingmirissa.com/tours"
+        />
+        <meta
+          property="og:title"
+          content="Unforgettable Sri Lanka Island Tours | Wildlife & Heritage"
+        />
+        <meta
+          property="og:description"
+          content="From golden beaches to misty mountains. Discover our hand-picked Sri Lanka travel packages and custom itineraries for 2025."
+        />
+        <meta
+          property="og:image"
+          content="https://whalewatchingmirissa.com/assets/sri-lanka-tours-hero.jpg"
+        />
 
-    {/* Twitter Card */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Explore Sri Lanka | 2025 Custom Tour Packages" />
-    <meta 
-      name="twitter:description" 
-      content="Book your 2025 Sri Lanka adventure. Safaris, heritage sites, and tropical escapes tailored to your schedule." 
-    />
-    <meta name="twitter:image" content="https://whalewatchingmirissa.com/assets/sri-lanka-tours-hero.jpg" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Explore Sri Lanka | 2025 Custom Tour Packages"
+        />
+        <meta
+          name="twitter:description"
+          content="Book your 2025 Sri Lanka adventure. Safaris, heritage sites, and tropical escapes tailored to your schedule."
+        />
+        <meta
+          name="twitter:image"
+          content="https://whalewatchingmirissa.com/assets/sri-lanka-tours-hero.jpg"
+        />
 
-    {/* Robots & Directives */}
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-</Helmet>
+        {/* Robots & Directives */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+      </Helmet>
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section

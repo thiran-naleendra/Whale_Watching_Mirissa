@@ -132,9 +132,7 @@ const Home = () => {
     <>
       <Helmet>
         {/* Primary SEO Meta Tags */}
-        <title>
-          Whale Watching Mirissa 2025 | Best  Whale Tours Sri Lanka
-        </title>
+        <title>Whale Watching Mirissa 2025 | Best Whale Tours Sri Lanka</title>
         <meta
           name="title"
           content="Whale Watching Mirissa 2025 | Best  Whale Tours Sri Lanka"
