@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://whalewatchingmirissa.com/</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://whalewatchingmirissa.com/assets/hero-whale.jpg</image:loc>
+      <image:title>Blue Whale Sighting Mirissa Sri Lanka</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://whalewatchingmirissa.com/services</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://whalewatchingmirissa.com/tours</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://whalewatchingmirissa.com/activities</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://whalewatchingmirissa.com/gallery</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://whalewatchingmirissa.com/assets/dolphin-watch.jpg</image:loc>
+      <image:caption>Dolphin watching adventure in Mirissa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://whalewatchingmirissa.com/assets/whale-tail.jpg</image:loc>
+      <image:caption>Magnificent whale tail fluke in the Indian Ocean</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://whalewatchingmirissa.com/about</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://whalewatchingmirissa.com/contact</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

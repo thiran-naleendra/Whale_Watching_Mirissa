@@ -1,4 +1,6 @@
 import { Award, Heart, Shield, Users } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+
 
 const About = () => {
   const values = [
@@ -25,6 +27,50 @@ const About = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+    {/* Primary Meta Tags */}
+    <title>About Island Breeze Mirissa | 15+ Years Trusted Whale Tours</title>
+    <meta name="title" content="About Island Breeze Mirissa | 15+ Years Trusted Whale Tours" />
+    <meta 
+      name="description" 
+      content="Learn about Island Breeze Mirissa. Since 2009, we've provided safe, eco-friendly whale watching in Sri Lanka with expert guides and a 95% sighting success rate. Meet our team!" 
+    />
+
+    {/* Keywords Focused on Company Trust & Ethics */}
+    <meta 
+      name="keywords" 
+      content="island breeze mirissa, whale watching mirissa team, ethical whale watching sri lanka, mirissa boat tour operators, professional whale guides mirissa, ocean conservation sri lanka" 
+    />
+
+    {/* Canonical URL */}
+    <link rel="canonical" href="https://whalewatchingmirissa.com/about" />
+
+    {/* Open Graph / Facebook (Visualizing Trust) */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://whalewatchingmirissa.com/about" />
+    <meta property="og:title" content="Island Breeze Mirissa | Leading Whale Tour Operator Since 2009" />
+    <meta 
+      property="og:description" 
+      content="15 years of ocean expertise. Join Island Breeze for safe, ethical, and professional whale and dolphin watching adventures in Mirissa." 
+    />
+    <meta property="og:image" content="https://whalewatchingmirissa.com/assets/about-team-image.jpg" />
+    <meta property="og:site_name" content="Whale Watching Mirissa" />
+
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us | Island Breeze Whale Watching Mirissa" />
+    <meta 
+      name="twitter:description" 
+      content="Discover our story. 15 years, 50,000+ happy guests, and the best whale sighting rates in Sri Lanka." 
+    />
+    <meta name="twitter:image" content="https://whalewatchingmirissa.com/assets/about-team-image.jpg" />
+
+    {/* SEO Directives */}
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Whale Watching Mirissa" />
+</Helmet>
     <div className="min-h-screen bg-white pt-20 md:pt-24 pb-12 md:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
@@ -108,6 +154,7 @@ const About = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

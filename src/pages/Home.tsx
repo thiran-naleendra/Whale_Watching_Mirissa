@@ -7,6 +7,7 @@ import {
   Palmtree,
   ChevronDown,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Mountain, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -128,246 +129,322 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="relative min-h-screen md:min-h-[600px] flex items-center justify-center overflow-hidden pt-16 md:pt-0">
-        <div className="absolute inset-0 w-full h-full">
-          {heroImages.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <img
-                src={image}
-                alt="Hero"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
-        </div>
+    <>
+      <Helmet>
+        {/* Primary SEO Meta Tags */}
+        <title>
+          Whale Watching Mirissa 2025 | Best  Whale Tours Sri Lanka
+        </title>
+        <meta
+          name="title"
+          content="Whale Watching Mirissa 2025 | Best  Whale Tours Sri Lanka"
+        />
+        <meta
+          name="description"
+          content="Join the #1 whale watching tour in Mirissa, Sri Lanka. 95% Sighting success for  Whales & Dolphins. Expert crew, safe boats, and breakfast included. Book your 2025 tour!"
+        />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 md:py-0">
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
-              Experience the Majestic
-              <br className="hidden sm:block" />
-              <span className="text-teal-300">Blue Whales</span>
-            </h1>
+        {/* High-Intent Keyword Optimization */}
+        <meta
+          name="keywords"
+          content="whale watching mirissa,  whale tours sri lanka, mirissa whale watching price, best whale watching company mirissa, private boat mirissa, dolphin watching mirissa"
+        />
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16">
-              <button
-                onClick={handleBookNow}
-                className="w-full sm:w-auto group bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-teal-400 hover:text-white transition duration-300 flex items-center justify-center space-x-2 shadow-2xl"
-              >
-                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-                <span>Book Adventure</span>
-              </button>
-            </div>
+        <link rel="canonical" href="https://whalewatchingmirissa.com/" />
 
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mx-auto mt-12">
-              {highlights.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/20"
-                >
-                  <div className="text-2xl sm:text-4xl font-bold text-white mb-1">
-                    {item.number}
-                  </div>
-                  <div className="text-white text-xs sm:text-sm font-semibold">
-                    {item.label}
-                  </div>
-                  <div className="text-blue-100 text-xs">
-                    {item.description}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* Open Graph / Facebook / WhatsApp (Optimized for Shares) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://whalewatchingmirissa.com/" />
+        <meta
+          property="og:title"
+          content="Whale Watching Mirissa | 95% Whale Sighting Success"
+        />
+        <meta
+          property="og:description"
+          content="Book the ultimate ocean adventure. Spot majestic Whales and Dolphins in Mirissa with Sri Lanka's most professional crew."
+        />
+        <meta
+          property="og:image"
+          content="https://whalewatchingmirissa.com/assets/logo-BXiZ3lwa.png"
+        />
+        <meta property="og:site_name" content="Whale Watching Mirissa" />
 
-        <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden md:block">
-          <ArrowDown className="w-8 h-8 text-white" />
-        </div>
+        {/* Twitter Card (Optimized for Travel Trends) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Whale Watching Mirissa Sri Lanka | 2025 Tours"
+        />
+        <meta
+          name="twitter:description"
+          content="Experience the giants of the ocean. Daily Blue Whale tours departing 7 AM from Mirissa Harbor."
+        />
+        <meta
+          name="twitter:image"
+          content="https://whalewatchingmirissa.com/assets/logo-BXiZ3lwa.png"
+        />
 
-        <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex gap-2 md:gap-3">
-          {heroImages.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentImageIndex(idx)}
-              className={`transition-all ${
-                idx === currentImageIndex
-                  ? "bg-white w-6 md:w-8 h-2 md:h-2"
-                  : "bg-white/50 w-2 md:w-2 h-2 md:h-2"
-              }`}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
-              Quick Access
-            </h2>
-            <p className="text-sm sm:text-base md:text-xl text-gray-600">
-              Start your ocean adventure today
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {quickServices.map((service, idx) => {
-              const Icon = service.icon;
-              return (
-                <Link
-                  key={idx}
-                  to={service.path}
-                  className="group bg-white rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 p-6 md:p-8 text-center hover:-translate-y-2"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl md:rounded-2xl mb-4 group-hover:scale-110 transition">
-                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-gray-600">
-                    {service.description}
-                  </p>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Tours Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-12 md:pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
-          {tours.map((tour, index) => {
-            const Icon = tour.icon;
-            return (
+        {/* Search Engine Directives */}
+        <meta
+          name="robots"
+          content="index, follow, max-snippet:-1, max-image-preview:large"
+        />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="theme-color" content="#0ea5e9" />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <section className="relative min-h-screen md:min-h-[600px] flex items-center justify-center overflow-hidden pt-16 md:pt-0">
+          <div className="absolute inset-0 w-full h-full">
+            {heroImages.map((image, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col"
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
               >
-                <div className="relative h-48 md:h-64 overflow-hidden">
-                  <img
-                    src={tour.image}
-                    alt={tour.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 flex items-center space-x-3">
-                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                    <h3 className="text-lg md:text-2xl font-bold text-white">
-                      {tour.title}
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="p-6 md:p-8 flex-1 flex flex-col">
-                  <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base flex-1">
-                    {tour.description}
-                  </p>
-                </div>
+                <img
+                  src={image}
+                  alt="Hero"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            );
-          })}
-        </div>
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+          </div>
 
-        <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                  Frequently Asked Questions
-                </h2>
-                <div className="space-y-4">
-                  {faqs.map((faq, idx) => (
-                    <div
-                      key={idx}
-                      className="border border-gray-200 rounded-lg overflow-hidden"
-                    >
-                      <button
-                        onClick={() =>
-                          setExpandedFAQ(expandedFAQ === idx ? null : idx)
-                        }
-                        className="w-full bg-gray-50 hover:bg-gray-100 transition p-5 md:p-6 flex items-center justify-between text-left"
-                      >
-                        <h3 className="text-base md:text-lg font-semibold text-gray-900">
-                          {faq.question}
-                        </h3>
-                        <ChevronDown
-                          className={`w-5 h-5 md:w-6 md:h-6 text-gray-600 transition-transform ${
-                            expandedFAQ === idx ? "transform rotate-180" : ""
-                          }`}
-                        />
-                      </button>
-                      {expandedFAQ === idx && (
-                        <div className="bg-white p-5 md:p-6 border-t border-gray-200">
-                          <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                            {faq.answer}
-                          </p>
-                        </div>
-                      )}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 md:py-0">
+            <div className="text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                Experience the Majestic
+                <br className="hidden sm:block" />
+                <span className="text-teal-300">Whales</span>
+              </h1>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16">
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://seat-booking.whalewatchingmirissa.com/seatbooking",
+                      "_blank"
+                    )
+                  }
+                  className="w-full sm:w-auto group bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-teal-400 hover:text-white transition duration-300 flex items-center justify-center space-x-2 shadow-2xl"
+                >
+                  <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span>Book Adventure</span>
+                </button>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mx-auto mt-12">
+                {highlights.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/20"
+                  >
+                    <div className="text-2xl sm:text-4xl font-bold text-white mb-1">
+                      {item.number}
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex items-center justify-center">
-                <div className="relative w-full h-96 md:h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group">
-                  <img
-                    src={jcats}
-                    alt="Restaurant"
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                  />
-                </div>
+                    <div className="text-white text-xs sm:text-sm font-semibold">
+                      {item.label}
+                    </div>
+                    <div className="text-blue-100 text-xs">
+                      {item.description}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
+
+          <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden md:block">
+            <ArrowDown className="w-8 h-8 text-white" />
+          </div>
+
+          <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex gap-2 md:gap-3">
+            {heroImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentImageIndex(idx)}
+                className={`transition-all ${
+                  idx === currentImageIndex
+                    ? "bg-white w-6 md:w-8 h-2 md:h-2"
+                    : "bg-white/50 w-2 md:w-2 h-2 md:h-2"
+                }`}
+              />
+            ))}
           </div>
         </section>
 
-        {/* Custom Tours Section */}
-        <div className="text-center bg-gradient-to-r from-blue-200 to-teal-200 rounded-2xl md:rounded-3xl p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Custom Tour Packages
-          </h3>
-          <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Want to create your own adventure? We offer personalized tour
-            packages tailored to your interests and schedule.
-          </p>
-          <button
-            onClick={() => handleBookNow("Custom Tour Package")}
-            className="bg-blue-600 text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center space-x-2 text-sm md:text-lg"
-          >
-            <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
-            <span>Plan Your Tour</span>
-          </button>
-        </div>
-      </div>
+        {/* Tours Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-12 md:pb-24">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
+            {tours.map((tour, index) => {
+              const Icon = tour.icon;
+              return (
+                <div
+                  key={index}
+                  className="group bg-white rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col"
+                >
+                  <div className="relative h-48 md:h-64 overflow-hidden">
+                    <img
+                      src={tour.image}
+                      alt={tour.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 flex items-center space-x-3">
+                      <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                      <h3 className="text-lg md:text-2xl font-bold text-white">
+                        {tour.title}
+                      </h3>
+                    </div>
+                  </div>
 
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-teal-500">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-            Ready for Your Adventure?
-          </h2>
-          <p className="text-sm sm:text-base md:text-xl text-blue-100 mb-8">
-            Don't miss the chance to witness the magnificent blue whales in
-            their natural habitat.
-          </p>
-          <button
-            onClick={handleBookNow}
-            className="bg-white text-blue-600 px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold hover:bg-blue-50 transition duration-300 inline-flex items-center space-x-2 text-base md:text-lg shadow-xl"
-          >
-            <MessageCircle className="w-5 h-5" />
-            <span>Book via WhatsApp</span>
-          </button>
+                  <div className="p-6 md:p-8 flex-1 flex flex-col">
+                    <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base flex-1">
+                      {tour.description}
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => handleBookNow(tour.title)}
+                    className="w-full bg-gradient-to-r from-blue-600 to-teal-500 text-white py-2 md:py-3 rounded-full font-semibold hover:from-blue-700 hover:to-teal-600 transition duration-300 flex items-center justify-center space-x-2 text-xs md:text-base"
+                  >
+                    <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
+                    <span>Book Now</span>
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+
+          <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-4">
+                    {faqs.map((faq, idx) => (
+                      <div
+                        key={idx}
+                        className="border border-gray-200 rounded-lg overflow-hidden"
+                      >
+                        <button
+                          onClick={() =>
+                            setExpandedFAQ(expandedFAQ === idx ? null : idx)
+                          }
+                          className="w-full bg-gray-50 hover:bg-gray-100 transition p-5 md:p-6 flex items-center justify-between text-left"
+                        >
+                          <h3 className="text-base md:text-lg font-semibold text-gray-900">
+                            {faq.question}
+                          </h3>
+                          <ChevronDown
+                            className={`w-5 h-5 md:w-6 md:h-6 text-gray-600 transition-transform ${
+                              expandedFAQ === idx ? "transform rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                        {expandedFAQ === idx && (
+                          <div className="bg-white p-5 md:p-6 border-t border-gray-200">
+                            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                              {faq.answer}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center">
+                  <div className="relative w-full h-96 md:h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group">
+                    <img
+                      src={jcats}
+                      alt="Restaurant"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Custom Tours Section */}
+          <div className="text-center bg-gradient-to-r from-blue-200 to-teal-200 rounded-2xl md:rounded-3xl p-8 md:p-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Custom Tour Packages
+            </h3>
+            <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Want to create your own adventure? We offer personalized tour
+              packages tailored to your interests and schedule.
+            </p>
+            <button
+              onClick={() => handleBookNow("Custom Tour Package")}
+              className="bg-blue-600 text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center space-x-2 text-sm md:text-lg"
+            >
+              <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+              <span>Plan Your Tour</span>
+            </button>
+          </div>
         </div>
-      </section>
-    </div>
+
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+                Quick Access
+              </h2>
+              <p className="text-sm sm:text-base md:text-xl text-gray-600">
+                Start your ocean adventure today
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {quickServices.map((service, idx) => {
+                const Icon = service.icon;
+                return (
+                  <Link
+                    key={idx}
+                    to={service.path}
+                    className="group bg-white rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 p-6 md:p-8 text-center hover:-translate-y-2"
+                  >
+                    <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl md:rounded-2xl mb-4 group-hover:scale-110 transition">
+                      <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-gray-600">
+                      {service.description}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-teal-500">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+              Ready for Your Adventure?
+            </h2>
+            <p className="text-sm sm:text-base md:text-xl text-blue-100 mb-8">
+              Don't miss the chance to witness the magnificent blue whales in
+              their natural habitat.
+            </p>
+            <button
+              onClick={handleBookNow}
+              className="bg-white text-blue-600 px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold hover:bg-blue-50 transition duration-300 inline-flex items-center space-x-2 text-base md:text-lg shadow-xl"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span>Book via WhatsApp</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

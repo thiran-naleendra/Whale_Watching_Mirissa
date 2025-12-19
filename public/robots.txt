@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block access to private system folders (if using a CMS or framework)
+Disallow: /private/
+Disallow: /config/
+
+# Optimization for smaller search engines
+Crawl-delay: 10
+
+# Direct link to your sitemap (Crucial for SEO)
+Sitemap: https://whalewatchingmirissa.com/sitemap.xml

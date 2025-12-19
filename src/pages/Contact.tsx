@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle, Clock, Calendar } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const handleWhatsApp = () => {
@@ -14,6 +15,44 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <Helmet>
+    {/* Primary SEO Meta Tags */}
+    <title>Contact Us | Book Whale Watching Mirissa | 2025 Tour Bookings</title>
+    <meta name="title" content="Contact Us | Book Whale Watching Mirissa | 2025 Tour Bookings" />
+    <meta 
+      name="description" 
+      content="Get in touch with Island Breeze Mirissa. Book your whale watching tour via WhatsApp, Phone, or Email. Daily departures at 7 AM from Mirissa Harbor. Instant confirmation!" 
+    />
+
+    {/* Local SEO & Booking Keywords */}
+    <meta 
+      name="keywords" 
+      content="book whale watching mirissa, mirissa whale watching contact number, whale watching mirissa harbor location, whale tour price mirissa, island breeze mirissa booking, whale watching sri lanka whatsapp" 
+    />
+
+    {/* Canonical URL */}
+    <link rel="canonical" href="https://whalewatchingmirissa.com/contact" />
+
+    {/* Open Graph / Facebook (Designed for trust) */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://whalewatchingmirissa.com/contact" />
+    <meta property="og:title" content="Contact Island Breeze Mirissa | Book Your Ocean Adventure" />
+    <meta 
+      property="og:description" 
+      content="Ready for the adventure of a lifetime? Contact us for instant bookings and inquiries about our 2025 whale and dolphin tours." 
+    />
+    <meta property="og:image" content="https://whalewatchingmirissa.com/assets/contact-hero.jpg" />
+
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us | Whale Watching Mirissa" />
+    <meta name="twitter:description" content="Instant booking via WhatsApp. Call or email us to reserve your spot for the best whale watching experience in Sri Lanka." />
+
+    {/* Robots & Directives */}
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+</Helmet>
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20 md:pt-24 pb-12 md:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
@@ -174,6 +213,7 @@ const Contact = () => {
 
        
     </div>
+    </>
   );
 };
 

@@ -1,11 +1,10 @@
 import { Ship, Users, Zap, MessageCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Services = () => {
   const handleBookNow = (serviceName: string) => {
     window.open(
-      `https://wa.me/94713121061?text=I%27m%20interested%20in%20booking%20${encodeURIComponent(
-        serviceName
-      )}`,
+      `https://seat-booking.whalewatchingmirissa.com/seatbooking`,
       "_blank"
     );
   };
@@ -14,7 +13,7 @@ const Services = () => {
     {
       title: "Shared Whale Watching Tour",
       icon: Users,
-      price: "LKR 12,000",
+      price: "Popular",
       description:
         "Join fellow ocean enthusiasts on our spacious double-decker boat. Perfect for families and groups.",
       features: [
@@ -56,6 +55,48 @@ const Services = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+    {/* Primary SEO Meta Tags */}
+    <title>Compare Whale Tours | Shared, Speedboat & Private Charters Mirissa</title>
+    <meta name="title" content="Compare Whale Tours | Shared, Speedboat & Private Charters Mirissa" />
+    <meta 
+      name="description" 
+      content="Choose your perfect whale watching adventure in Mirissa. From affordable shared tours with breakfast to exclusive private speedboats and luxury charters. 95% sighting success!" 
+    />
+
+    {/* Keywords Focused on Service Comparison */}
+    <meta 
+      name="keywords" 
+      content="whale watching mirissa price, private speed boat mirissa, private whale watching charter sri lanka, shared whale tour mirissa, whale watching services mirissa, luxury boat tours mirissa" 
+    />
+
+    {/* Canonical URL */}
+    <link rel="canonical" href="https://whalewatchingmirissa.com/services" />
+
+    {/* Open Graph / Facebook (Visualizing the Options) */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://whalewatchingmirissa.com/services" />
+    <meta property="og:title" content="The Best Whale Watching Experiences in Mirissa" />
+    <meta 
+      property="og:description" 
+      content="Compare our top-rated whale watching services. Whether you want a social shared tour or a fast private speedboat, we have the perfect ocean adventure for you." 
+    />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1585880902425-7ef6e1b0f87b?q=80" />
+
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Whale Watching Mirissa | Choose Your Tour Type" />
+    <meta 
+      name="twitter:description" 
+      content="Shared tours, private charters, and fast speedboats. Find the best way to see whales in Mirissa with 15+ years of experience." 
+    />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1585880902425-7ef6e1b0f87b?q=80" />
+
+    {/* SEO Directives */}
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+</Helmet>
     <div className="min-h-screen bg-white pt-20 md:pt-24 pb-12 md:pb-24">
       {/* Hero Section */}
       <section
@@ -187,6 +228,7 @@ const Services = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
